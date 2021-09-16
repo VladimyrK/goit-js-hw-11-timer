@@ -5,10 +5,10 @@ class CountdownTimer {
   }
 
   timer() {
-    const daysHtml = document.querySelector('[data-value="days"]')
-    const hoursHtml = document.querySelector('[data-value="hours"]')
-    const minutesHtml = document.querySelector('[data-value="mins"]')
-    const secondsHtml = document.querySelector('[data-value="secs"]')
+    const daysHtml = document.querySelector(`${this.selector} [data-value="days"]`)
+    const hoursHtml = document.querySelector(`${this.selector} [data-value="hours"]`)
+    const minutesHtml = document.querySelector(`${this.selector} [data-value="mins"]`)
+    const secondsHtml = document.querySelector(`${this.selector} [data-value="secs"]`)
 
     setInterval(() => {
       const remainingTime = this.targetDate.getTime() - Date.now()
